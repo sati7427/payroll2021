@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A69D4479-F52E-48DC-8F40-9705FA89E954}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PayrollNew</RootNamespace>
+    <AssemblyName>PayrollNew</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode>true</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SpeechLib">
+      <HintPath>E:\AAA\Interop.SpeechLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MSCaptcha">
+      <HintPath>E:\AAA\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.1\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="EmpMaster\CurrentDetails.aspx" />
+    <Content Include="EmpMaster\Deduction.aspx" />
+    <Content Include="EmpMaster\Dues.aspx" />
+    <Content Include="EmpMaster\PermanentDetails.aspx" />
+    <Content Include="EmpMaster\PLI.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="EmployeeMaster.Master" />
+    <Content Include="Styles\css\W3.css" />
+    <Content Include="Styles\js\ResponsiveVoice.js" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="Styles\css\animate.min.css" />
+    <Content Include="Styles\css\base-responsive.css" />
+    <Content Include="Styles\css\base.css" />
+    <Content Include="Styles\css\dashboard.css" />
+    <Content Include="Styles\css\dataTables.jqueryui.css" />
+    <Content Include="Styles\css\datepicker.css" />
+    <Content Include="Styles\css\font-awesome.min.css" />
+    <Content Include="Styles\css\site.css" />
+    <Content Include="Styles\css\slicknav.min.css" />
+    <Content Include="Styles\favicon.ico" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Styles\images\21.jpg" />
+    <Content Include="Styles\images\bg.jpg" />
+    <Content Include="Styles\images\card-profile.png" />
+    <Content Include="Styles\images\carousel\carousel-bg.png" />
+    <Content Include="Styles\images\carousel\data-gov.png" />
+    <Content Include="Styles\images\carousel\digital-india.png" />
+    <Content Include="Styles\images\carousel\e-gazette.png" />
+    <Content Include="Styles\images\carousel\eci.png" />
+    <Content Include="Styles\images\carousel\ganhri.png" />
+    <Content Include="Styles\images\carousel\goidirectory.png" />
+    <Content Include="Styles\images\carousel\incredible-india.png" />
+    <Content Include="Styles\images\carousel\india-gov.png" />
+    <Content Include="Styles\images\carousel\makeinindia.png" />
+    <Content Include="Styles\images\carousel\mygov.png" />
+    <Content Include="Styles\images\carousel\myvisit-logo.png" />
+    <Content Include="Styles\images\carousel\pg-portal.png" />
+    <Content Include="Styles\images\carousel\pmnrf.png" />
+    <Content Include="Styles\images\digital-india.png" />
+    <Content Include="Styles\images\emblem-dark.png" />
+    <Content Include="Styles\images\icons\down-arrow.png" />
+    <Content Include="Styles\images\icons\ico-accessibility.png" />
+    <Content Include="Styles\images\icons\ico-site-search.png" />
+    <Content Include="Styles\images\icons\ico-sitemap.png" />
+    <Content Include="Styles\images\icons\ico-skip.png" />
+    <Content Include="Styles\images\icons\ico-social.png" />
+    <Content Include="Styles\images\inner-img\img1.jpg" />
+    <Content Include="Styles\images\inner-img\img2.jpg" />
+    <Content Include="Styles\images\NIC.png" />
+    <Content Include="Styles\js\bootstrap-datepicker.js" />
+    <Content Include="Styles\js\dashboard.js" />
+    <Content Include="Styles\js\jquery.dataTables.min.js" />
+    <Content Include="Styles\js\jquery.slicknav.min.js" />
+    <Content Include="Styles\js\Jquery1.11.min.js" />
+    <Content Include="Styles\js\jquery-3.6.0.min.js" />
+    <Content Include="Styles\js\npm.js" />
+    <Content Include="Styles\js\popper.min.js" />
+    <Content Include="Styles\js\site.js" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Styles\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Styles\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Styles\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Styles\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Styles\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Styles\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Styles\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Styles\lib\jquery\dist\jquery.js" />
+    <Content Include="Styles\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Styles\lib\jquery\LICENSE.txt" />
+    <Content Include="Styles\Login\css\base-responsive.css" />
+    <Content Include="Styles\Login\css\base.css" />
+    <Content Include="Styles\Login\css\paper-dashboard.css" />
+    <Content Include="Styles\Login\css\sb-admin-2.min.css" />
+    <Content Include="Styles\Login\css\uikit-rtl.css" />
+    <Content Include="Styles\Login\css\uikit-rtl.min.css" />
+    <Content Include="Styles\Login\css\uikit.css" />
+    <Content Include="Styles\Login\css\uikit.docs.min.css" />
+    <Content Include="Styles\Login\css\uikit.min.css" />
+    <Content Include="Styles\Login\images\21.jpg" />
+    <Content Include="Styles\Login\images\banner1.png" />
+    <Content Include="Styles\Login\images\carousel\data-gov.png" />
+    <Content Include="Styles\Login\images\carousel\digital-india.png" />
+    <Content Include="Styles\Login\images\carousel\e-gazette.png" />
+    <Content Include="Styles\Login\images\carousel\eci.png" />
+    <Content Include="Styles\Login\images\carousel\ganhri.png" />
+    <Content Include="Styles\Login\images\carousel\goidirectory.png" />
+    <Content Include="Styles\Login\images\carousel\incredible-india.png" />
+    <Content Include="Styles\Login\images\carousel\india-gov.png" />
+    <Content Include="Styles\Login\images\carousel\makeinindia.png" />
+    <Content Include="Styles\Login\images\carousel\mygov.png" />
+    <Content Include="Styles\Login\images\carousel\myvisit-logo.png" />
+    <Content Include="Styles\Login\images\carousel\pg-portal.png" />
+    <Content Include="Styles\Login\images\carousel\pmnrf.png" />
+    <Content Include="Styles\Login\images\digital-india.png" />
+    <Content Include="Styles\Login\images\emblem-dark.png" />
+    <Content Include="Styles\Login\images\icons\ico-accessibility.png" />
+    <Content Include="Styles\Login\images\icons\ico-site-search.png" />
+    <Content Include="Styles\Login\images\icons\ico-sitemap.png" />
+    <Content Include="Styles\Login\images\icons\ico-skip.png" />
+    <Content Include="Styles\Login\images\icons\ico-social.png" />
+    <Content Include="Styles\Login\images\inner-img\img1.jpg" />
+    <Content Include="Styles\Login\images\inner-img\img2.jpg" />
+    <Content Include="Styles\Login\images\nic.png" />
+    <Content Include="Styles\Login\images\swachh-bharat.png" />
+    <Content Include="Styles\Login\images\team_section.jpg" />
+    <Content Include="Styles\Login\js\custom-chart.js" />
+    <Content Include="Styles\Login\js\jquery.min.js" />
+    <Content Include="Styles\Login\js\uikit-icons.js" />
+    <Content Include="Styles\Login\js\uikit-icons.min.js" />
+    <Content Include="Styles\Login\js\uikit.js" />
+    <Content Include="Styles\Login\js\uikit.min.js" />
+    <Content Include="Styles\Login\vendor\chart.js\Chart.js" />
+    <Content Include="Styles\Login\vendor\chart.js\Chart.min.js" />
+    <Content Include="Styles\Login\vendor\chart.js\moment.min.js" />
+    <Content Include="Styles\Login\vendor\chart.js\utils.js" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\all.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\duotone.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\duotone.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\light.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\light.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Styles\Login\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Styles\Login\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Styles\Login\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Styles\Login\vendor\jquery\jquery.js" />
+    <Content Include="Styles\Login\vendor\jquery\jquery.min.js" />
+    <Content Include="Styles\Login\vendor\jquery\jquery.slim.js" />
+    <Content Include="Styles\Login\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Styles\pay.jpg" />
+    <Content Include="Styles\pay1.jpg" />
+    <Content Include="Styles\site.js" />
+    <Content Include="Styles\Test\bootstrap-theme.css" />
+    <Content Include="Styles\Test\bootstrap.min.css" />
+    <Content Include="Styles\Test\dataTables.jqueryui.css" />
+    <Content Include="Styles\Test\jquery-1.11.1.min.js" />
+    <Content Include="Styles\Test\jquery.dataTables.min.js" />
+    <Content Include="Styles\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Styles\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Styles\vendor\charts\Chart.bundle.js" />
+    <Content Include="Styles\vendor\charts\Chart.bundle.min.js" />
+    <Content Include="Styles\vendor\charts\Chart.css" />
+    <Content Include="Styles\vendor\charts\Chart.js" />
+    <Content Include="Styles\vendor\charts\Chart.min.css" />
+    <Content Include="Styles\vendor\charts\Chart.min.js" />
+    <Content Include="Styles\vendor\charts\moment.min.js" />
+    <Content Include="Styles\vendor\charts\utils.js" />
+    <Content Include="Styles\vendor\fontawesome-free\css\all.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\duotone.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\duotone.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\light.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\light.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Styles\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Styles\vendor\jquery-ui\AUTHORS.txt" />
+    <Content Include="Styles\vendor\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="Styles\vendor\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Styles\vendor\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Styles\vendor\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Styles\vendor\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Styles\vendor\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Styles\vendor\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\vendor\jquery-ui\index.html" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.css" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.js" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="Styles\vendor\jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="Styles\vendor\jquery-ui\LICENSE.txt" />
+    <Content Include="Styles\vendor\jquery\jquery.min.js" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="Styles\fonts\fffForward.ttf" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Styles\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Styles\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Styles\lib\bootstrap\LICENSE" />
+    <Content Include="Styles\lib\jquery-validation\LICENSE.md" />
+    <Content Include="Styles\lib\jquery\dist\jquery.min.map" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\webfonts\fa-duotone-900.ttf" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\webfonts\fa-light-300.ttf" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Styles\Login\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Styles\Login\vendor\jquery\jquery.min.map" />
+    <Content Include="Styles\Login\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Styles\vendor\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Styles\vendor\fontawesome-free\webfonts\fa-duotone-900.ttf" />
+    <Content Include="Styles\vendor\fontawesome-free\webfonts\fa-light-300.ttf" />
+    <Content Include="Styles\vendor\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Styles\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Styles\vendor\jquery-ui\package.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CsClass\Connections.cs" />
+    <Compile Include="CsClass\LoginClasses.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeMaster.Master.cs">
+      <DependentUpon>EmployeeMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeMaster.Master.designer.cs">
+      <DependentUpon>EmployeeMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EmpMaster\CurrentDetails.aspx.cs">
+      <DependentUpon>CurrentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpMaster\CurrentDetails.aspx.designer.cs">
+      <DependentUpon>CurrentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpMaster\Deduction.aspx.cs">
+      <DependentUpon>Deduction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpMaster\Deduction.aspx.designer.cs">
+      <DependentUpon>Deduction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpMaster\Dues.aspx.cs">
+      <DependentUpon>Dues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpMaster\Dues.aspx.designer.cs">
+      <DependentUpon>Dues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpMaster\PermanentDetails.aspx.cs">
+      <DependentUpon>PermanentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpMaster\PermanentDetails.aspx.designer.cs">
+      <DependentUpon>PermanentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpMaster\PLI.aspx.cs">
+      <DependentUpon>PLI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpMaster\PLI.aspx.designer.cs">
+      <DependentUpon>PLI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54368</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54368/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
