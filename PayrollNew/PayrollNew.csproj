@@ -126,7 +126,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="EmployeeMaster.Master" />
-    <Content Include="Sample.aspx" />
     <Content Include="Styles\css\W3.css" />
     <Content Include="Styles\js\ResponsiveVoice.js" />
     <Content Include="WebForm1.aspx" />
@@ -469,13 +468,6 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sample.aspx.cs">
-      <DependentUpon>Sample.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sample.aspx.designer.cs">
-      <DependentUpon>Sample.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
